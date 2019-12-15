@@ -30,14 +30,36 @@ class NaturalLabel: UILabel {
     }
 
     func naturalize() {
-        guard let text = self.text else { return }
-        debugPrint(text)
+        guard let text = self.text?.replacingOccurrences(of: "\n", with: "") else { return }
 
         let tokenizer = NLTokenizer(unit: .word)
         tokenizer.string = text
 
         let tokens = tokenizer.tokens(for: text.startIndex..<text.endIndex)
-        let words = tokens.map({ text[$0] })
-        debugPrint(words)
+        let words = tokens.map({ String(text[$0]) })
+        guard words.count > 1 else { return }
+
+        var fixedLines = [String]()
+        var fixedTokens = 0
+
+        while fixedTokens < tokens.count {
+            let remainingTokens = tokens.dropFirst(fixedTokens)
+            let remainingText = String(text[remainingTokens.first!.lowerBound...])
+            let remainingLines = self.getLines(from: remainingText)
+
+            guard let brokenToken = remainingTokens.first(where: {
+                let word = text[$0]
+                return !remainingLines.contains(where: { $0.contains(word) })
+            }) else {
+                fixedLines += [remainingText]
+                fixedTokens += remainingTokens.count
+                continue
+            }
+
+            fixedLines += [String(text[remainingTokens.first!.lowerBound..<brokenToken.lowerBound])]
+            fixedTokens = remainingTokens.firstIndex(of: brokenToken)!
+        }
+
+        self.text = fixedLines.joined(separator: "\n")
     }
 }

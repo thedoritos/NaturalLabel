@@ -14,7 +14,8 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var authorsLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
 
-    func naturalize() {
+    override func layoutSubviews() {
         self.bookTitleLabel.naturalize()
+        super.layoutSubviews()
     }
 }
