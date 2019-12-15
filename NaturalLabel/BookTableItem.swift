@@ -10,10 +10,16 @@ import Foundation
 
 struct BookTableItem {
     let title: String
+    let coverImageURL: URL
+    let authors: String
+    let summary: String
 
     static func from(model: Book) -> BookTableItem {
         return BookTableItem(
-            title: model.title
+            title: model.title,
+            coverImageURL: model.coverImageURL,
+            authors: model.authors.joined(separator: " / "),
+            summary: model.summary
         )
     }
 }

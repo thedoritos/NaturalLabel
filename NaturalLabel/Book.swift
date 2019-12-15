@@ -10,4 +10,7 @@ import Foundation
 
 struct Book {
     let title: String
+    let coverImageURL: URL
+    let authors: [String]
+    let summary: String
 }
