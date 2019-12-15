@@ -23,7 +23,7 @@
                             <constraint firstAttribute="height" constant="120" id="kK5-61-TVI"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZe-fg-YS8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZe-fg-YS8" customClass="NaturalLabel" customModule="NaturalLabel" customModuleProvider="target">
                         <rect key="frame" x="112" y="8" width="200" height="25.5"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                         <nil key="textColor"/>

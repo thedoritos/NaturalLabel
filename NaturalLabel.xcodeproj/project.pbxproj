@@ -19,6 +19,7 @@
 		7625B20823A5EC8E00912816 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7625B20623A5EC8E00912816 /* BookTableViewCell.swift */; };
 		7625B20923A5EC8E00912816 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7625B20723A5EC8E00912816 /* BookTableViewCell.xib */; };
 		7625B21623A6053800912816 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7625B21523A6053800912816 /* Nuke.framework */; };
+		7625B21C23A62C3000912816 /* NaturalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7625B21B23A62C3000912816 /* NaturalLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7625B20623A5EC8E00912816 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		7625B20723A5EC8E00912816 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		7625B21523A6053800912816 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		7625B21B23A62C3000912816 /* NaturalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				7625B20423A5EB3A00912816 /* BookTableItem.swift */,
 				7625B20623A5EC8E00912816 /* BookTableViewCell.swift */,
 				7625B20723A5EC8E00912816 /* BookTableViewCell.xib */,
+				7625B21B23A62C3000912816 /* NaturalLabel.swift */,
 			);
 			path = NaturalLabel;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				7625B1EC23A5E88D00912816 /* AppDelegate.swift in Sources */,
 				7625B20523A5EB3A00912816 /* BookTableItem.swift in Sources */,
 				7625B20823A5EC8E00912816 /* BookTableViewCell.swift in Sources */,
+				7625B21C23A62C3000912816 /* NaturalLabel.swift in Sources */,
 				7625B20323A5EAA800912816 /* BookRepository.swift in Sources */,
 				7625B20123A5EA8000912816 /* Book.swift in Sources */,
 				7625B1EE23A5E88D00912816 /* SceneDelegate.swift in Sources */,
