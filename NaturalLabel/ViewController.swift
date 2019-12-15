@@ -16,6 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Books"
+
         self.bookTableView.dataSource = self
         self.bookTableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "Book")
         self.bookTableView.rowHeight = UITableView.automaticDimension
