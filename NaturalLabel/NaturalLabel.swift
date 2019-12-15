@@ -7,6 +7,18 @@
 //
 
 import UIKit
+import NaturalLanguage
 
 class NaturalLabel: UILabel {
+    func naturalize() {
+        guard let text = self.text else { return }
+        debugPrint(text)
+
+        let tokenizer = NLTokenizer(unit: .word)
+        tokenizer.string = text
+
+        let tokens = tokenizer.tokens(for: text.startIndex..<text.endIndex)
+        let words = tokens.map({ text[$0] })
+        debugPrint(words)
+    }
 }

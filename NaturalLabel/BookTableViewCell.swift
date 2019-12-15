@@ -10,7 +10,11 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var coverImageView: UIImageView!
-    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var bookTitleLabel: NaturalLabel!
     @IBOutlet weak var authorsLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
+
+    func naturalize() {
+        self.bookTitleLabel.naturalize()
+    }
 }

@@ -45,6 +45,7 @@ extension ViewController: UITableViewDataSource {
         Nuke.loadImage(with: item.coverImageURL, into: cell.coverImageView)
         cell.authorsLabel.text = item.authors
         cell.summaryLabel.text = item.summary
+        cell.naturalize()
         return cell
     }
 }
